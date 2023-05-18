@@ -1,0 +1,89 @@
+/*
+font-family: 'Merriweather', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+.landingpage{
+  display: flex;
+  flex-direction: column;  
+  background-color: $white-four;
+  align-items: center;
+  gap: 40px;
+  padding: 40px;
+  &__img{
+    width: 80%;
+  }
+  &__text{
+    text-align: center;
+    &--title{
+        color: $dull-orange;
+        font-size: 19.2px;
+        font-family: 'Merriweather', serif;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+    &--paragraph{
+        color: $dark-green-blue;
+        font-size: 12.8px;
+        font-family: 'Open Sans', sans-serif;
+    }
+  }
+  &__icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border: solid 1.6px rgba(225,115,52,.21);
+    border-radius: 5px;
+    column-gap: 30px;
+    text-align: center;
+    padding: 15px 15px;
+  }
+  &__buttom{
+    width: fit-content;
+    padding: 0 20px;
+    height: 42px;
+    font-family: 'Open Sans', sans-serif 600px;
+    font-size: 16px;
+    background-color: $dirty-blue;
+    color: $white-two;
+    border-radius: 30px;
+    text-transform: uppercase;
+    border: none;
+  }
+}
+.element-icon{
+    font-size: 22.4px;
+}
+.element-text{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12.8px;
+    color: $gunmetal;
+}
+@media screen and (min-width: 768px) {
+    .landingpage{
+        height: 963px;
+        justify-content: end;
+        &__img{
+            max-width: 419px;
+        }
+        &__text{
+            &--title{
+                font-size: 24px;
+            }
+            &--paragraph{
+                font-size: 16px;
+            }
+        }
+        &__buttom{
+            width: 129px;
+            margin-top: 200px;
+            margin-bottom: 30px;
+        }
+    }
+    .element-text{
+        font-size: 16px;
+    }
+    .element-icon{
+        font-size: 28px;
+    }
+}

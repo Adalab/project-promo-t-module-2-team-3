@@ -1,0 +1,26 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    border-top: solid 1px $white-three;
+    background-color: $white-two;
+    height: 110px;
+    padding-top: 20px;
+    &__copy{
+        font-family: 'Open Sans', sans-serif;
+        color: $brownish-grey;
+        font-size: 14px;
+    }
+    &__img{
+        width: 103px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .footer{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 30px;
+        height: 60px;
+    }
+}
