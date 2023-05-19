@@ -1,0 +1,50 @@
+.preview {
+    background: linear-gradient(to bottom, $silver, $pale-grey);
+    &__container {
+        margin-left: 45px;
+        margin-right: 35px;
+        padding-top: 38px;
+    }
+    .reset__button {
+        text-decoration: none;
+        color: $gunmetal;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        line-height: 1.67;
+        padding: 4px 12px;
+        border: 1.5px solid $white-two;
+        border-radius: 20px;
+        display: inline-block;
+        margin-bottom: 20px;
+
+        .fa-trash-can {
+            padding-right: 8px;
+            font-size: 1.2rem;
+        }
+    }
+    &__card {
+        background-color: $white-two;
+        padding-top: 20px;
+    }
+    .card__info{
+        border-left: 5px solid $dirty-blue;
+        margin-bottom: 10px;
+        
+        &--name {
+            color: $dark-green-blue;
+            font-size: 1.8rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            padding-left: 20px;
+        }
+
+        &--job {
+            color: $gunmetal;
+            font-size: 1.6rem;
+            line-height: 1.25;
+            margin-top: 4px;
+            padding-left: 20px;
+        }
+
+    }
+}
