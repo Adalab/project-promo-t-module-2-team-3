@@ -1,6 +1,7 @@
 .design{
     display: flex;
     transform : rotate(180deg); 
+    transform-origin: center;
     justify-content: flex-end;
 }
 .colors{
@@ -15,17 +16,22 @@
         color: $gunmetal;
     }
 }
-.list{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    &__circle{
-    width: 17px;
-    height: 17px;
-    background-color: $white-two;
-    border: 1px solid $silver;
-    border-radius: 50%;
+.main__box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
+.radio__button{
+    display: flex;
+    align-items: flex-start;
+
+}
+.radio__check {
+    margin-top: 5px;
+    margin-right: 10px;
+}
+.list{
+    display: flex;
 }
 .color__box{
     width: 30px;
