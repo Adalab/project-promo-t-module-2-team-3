@@ -1,0 +1,97 @@
+.preview {
+    background: linear-gradient(to bottom, $silver, $pale-grey);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    @media all and (min-width:768px) {
+            align-items: center;
+            // width: 40%; lo dejo comentado porque creo que no va a hacer falta, si damos grid a create-card.html
+            border-radius: 15px;
+            height: 80vh;
+            margin-right: 40px;
+        }
+    &__container {
+        margin-left: 15px;
+        padding-top: 38px;
+        margin-bottom: 45px;
+        display: flex;
+        flex-direction: column;
+        @media all and (min-width: 768px) {
+            margin-left: 0;
+            padding-top: 0;
+        }
+    }
+    .reset__button {
+        text-decoration: none;
+        color: $gunmetal;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        line-height: 1.67;
+        padding: 4px 10px 4px 10px;
+        border: 1.5px solid $white-two;
+        border-radius: 20px;
+        display: inline-block;
+        margin-bottom: 20px;
+        width: 75px;
+
+        .fa-trash-can {
+            padding-right: 8px;
+            font-size: 1.1rem;
+        }
+    }
+    &__card {
+        background-color: $white-two;
+        padding-top: 20px;
+        box-shadow: 0 1px 10px 0 $black-20, 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+    }
+    .card {
+        &__info{
+        border-left: 5px solid $dirty-blue;
+        margin-bottom: 10px;
+        
+            &--name {
+                color: $dark-green-blue;
+                font-size: 1.8rem;
+                font-family: $title;
+                font-weight: bold;
+                padding-left: 20px;
+            }
+
+            &--job {
+                color: $gunmetal;
+                font-size: 1.6rem;
+                line-height: 1.25;
+                padding-top: 4px;
+                padding-left: 20px;
+            }
+        }
+    }
+    .card__img {
+        display:block;
+        width: 100%;
+        object-fit: cover;
+    }
+    .card__rrss{
+        .rrss__link {
+            text-decoration: none;
+            border: 2px solid $hospital-green;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items:center;
+            width: 32px;
+            height: 32px;
+            margin: 10px 5px;
+            .fa-mobile-screen-button, .fa-envelope, .fa-linkedin-in, .fa-github-alt {
+                color: $dark-green-blue;
+                font-size: 18px;
+                padding: 5px;
+            }
+            &:first-child {
+                margin-left: 15px;
+            }
+        }
+    }
+}

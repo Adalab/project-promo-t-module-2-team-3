@@ -1,0 +1,60 @@
+.colors{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 20px 14px 0 25px;
+    height: 160px;
+    font-size: 14px;
+    border-bottom: 1px solid $white-three;
+    &__p{
+        color: $gunmetal;
+    }
+}
+.main__box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.radio__button{
+    display: flex;
+    align-items: flex-start;
+}
+.radio__check {
+    margin-top: 5px;
+    margin-right: 10px;
+}
+.color__list{
+    display: flex;
+}
+.color__box{
+    width: 30px;
+    height: 25px;
+}
+.box__1{
+    background-color: $dark-green-blue;
+}
+.box__2{
+    background-color: $dirty-blue;
+}
+.box__3{
+    background-color: $hospital-green;
+}
+.box__4{
+    background-color: $dried-blood;
+}
+.box__5{
+    background-color: $rusty-red;
+}
+.box__6{
+    background-color: $tomato;
+}
+.box__7{
+    background-color: $slate;
+}
+.box__8{
+    background-color: $faded-orange;
+}
+.box__9{
+    background-color: $light-grey-blue;
+}

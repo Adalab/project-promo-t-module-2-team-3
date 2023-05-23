@@ -1,0 +1,38 @@
+.section__form {
+    background-color: $white-four;
+}
+.form {
+    padding: 27px 20px;
+}
+.fieldset{
+    border-bottom: 1px solid $white-three;
+}
+
+.fieldset__div {
+    text-transform: uppercase;
+    display: inline-flex;
+    // display: grid;
+    // grid-template-columns: 1fr 5fr 1fr;
+    width: 100%;
+    height: 41px;
+    
+    .fa-solid, .fa-regular {
+        font-size: 1.7rem;
+        display: flex;
+        align-items: center;
+        width: 11%;
+    }
+    .div__title {
+        color: $gunmetal;
+        font-size: 1.8rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        width: 74%;
+    }
+    .fa-chevron-down {
+        display: flex;
+        justify-content: flex-end;
+        color: $gunmetal;
+    }
+}
