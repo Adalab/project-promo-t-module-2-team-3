@@ -1,0 +1,66 @@
+.share__create {
+    padding: 50px;
+    border-bottom: solid rgb(221, 220, 220) 1px;
+    &--button {
+        width: 200px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        color: $white-four;
+        font-size: 1.8rem;
+        border: none;
+        border-radius: 12px;
+        background-color: $dull-orange;
+    }
+    &--button.disabled {
+        background-color: $pinkish-grey;
+    }
+}
+
+.fa-regular, .fa-address-card{
+margin-right: 7px;
+}
+
+.share__container {
+    padding: 30px 0;
+
+    &--text {
+        font-size: 1.8rem;
+        color: $gunmetal;
+        display: flex;
+        justify-content: center;
+        }
+
+    &--link {
+        color: $dull-orange;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+        }
+
+    &--button {
+        width: 190px;
+        height: 30px;
+        background-color: $azure;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        border-radius: 3px;
+        
+        }
+}
+.share__button--link {
+    text-decoration: none;
+    color: white;
+}
+
+.fa-brands, .fa-twitter{
+    margin-right: 7px;
+}
