@@ -23,7 +23,7 @@
     margin-bottom: 30px;
    
 }
-.add-img {
+.img_button {
     width: 140px;
     height: 30px;
     margin: 7px 20px 20px 0;
@@ -33,19 +33,31 @@
     margin-bottom: 30px;
     justify-content: center;
     text-align: center;
-    padding-top: 6px;
+    border: none;
   
 &
 
 
-.span-img {
+.add_button--link {
   width: 96px;
   height: 20px;
   font-family: OpenSans;
   font-size: 1.5rem;
   color:$white-two ;
+  text-decoration: none;
 
 
 
 }
+}
+.square {
+    width: 30px;
+  height: 30px;
+  margin: 7px 74px 20px 20px;
+  border: solid 1px $hospital-green;
+}
+
+.img_button_box {
+    display: flex;
+    flex-direction: row;
 }
