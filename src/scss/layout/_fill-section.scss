@@ -11,8 +11,7 @@
     width: 281px;
     height: 18px;
     margin: 0 0 7px;
-    font-family: OpenSans;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: $dark-green-blue;
 }
 
@@ -41,7 +40,6 @@
 .add_button--link {
   width: 96px;
   height: 20px;
-  font-family: OpenSans;
   font-size: 1.5rem;
   color:$white-two ;
   text-decoration: none;
@@ -50,6 +48,12 @@
 
 }
 }
+ .rectangle::placeholder {
+
+  color: $pinkish-grey;
+
+ }
+
 .square {
     width: 30px;
   height: 30px;
