@@ -26,4 +26,5 @@ function handleClickRadio3 (event){
 
 radio3.addEventListener('click', handleClickRadio3);
 
-console.log(hola);
+
+
