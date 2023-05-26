@@ -1,0 +1,65 @@
+.palette1 {
+  .card {
+    &__info {
+      border-left: 5px solid $dirty-blue;
+      &--name {
+        color: $dark-green-blue;
+      }
+    }
+  }
+  .card__rrss {
+    .rrss__link {
+      border: 2px solid $hospital-green;
+      .fa-mobile-screen-button,
+      .fa-envelope,
+      .fa-linkedin-in,
+      .fa-github-alt {
+        color: $dirty-blue;
+      }
+    }
+  }
+}
+
+.palette2 {
+  .card {
+    &__info {
+      border-left: 5px solid $rusty-red;
+      &--name {
+        color: $dried-blood;
+      }
+    }
+  }
+  .card__rrss {
+    .rrss__link {
+      border: 2px solid $tomato;
+      .fa-mobile-screen-button,
+      .fa-envelope,
+      .fa-linkedin-in,
+      .fa-github-alt {
+        color: $rusty-red;
+      }
+    }
+  }
+}
+
+.palette3 {
+  .card {
+    &__info {
+      border-left: 5px solid $faded-orange;
+      &--name {
+        color: $slate;
+      }
+    }
+  }
+  .card__rrss {
+    .rrss__link {
+      border: 2px solid $light-grey-blue;
+      .fa-mobile-screen-button,
+      .fa-envelope,
+      .fa-linkedin-in,
+      .fa-github-alt {
+        color: $faded-orange;
+      }
+    }
+  }
+}
