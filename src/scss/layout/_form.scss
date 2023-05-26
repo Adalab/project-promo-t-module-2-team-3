@@ -36,3 +36,9 @@
         color: $gunmetal;
     }
 }
+@media all and (min-width:1024px){
+    .section__form{
+       width: 40vw; 
+    }
+    
+}

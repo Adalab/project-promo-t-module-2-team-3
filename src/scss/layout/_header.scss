@@ -1,0 +1,9 @@
+.header{
+    height: 110px;
+    display: flex;
+    align-items: center;
+    &__logo{
+        width: 200px;
+        margin-left: 40px;
+    }
+}
