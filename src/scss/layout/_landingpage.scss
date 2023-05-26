@@ -10,6 +10,8 @@ font-family: 'Open Sans', sans-serif;
   align-items: center;
   gap: 40px;
   padding: 40px;
+  padding-top: 95px;
+  height: 100vh;
   &__img{
     width: 80%;
   }
@@ -76,7 +78,7 @@ font-family: 'Open Sans', sans-serif;
         }
         &__buttom{
             width: 129px;
-            margin-top: 200px;
+            margin-top: 100px;
             margin-bottom: 30px;
         }
     }

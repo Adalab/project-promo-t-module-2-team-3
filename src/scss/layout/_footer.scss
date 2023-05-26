@@ -5,7 +5,7 @@
     align-items: center;
     border-top: solid 1px $white-three;
     background-color: $white-two;
-    height: 110px;
+    height: fit-content;
     padding-top: 20px;
     &__copy{
         font-family: 'Open Sans', sans-serif;
