@@ -12,10 +12,18 @@ const fillContainer = document.querySelector('.js_fill_container');
 
 const shareContainer = document.querySelector('.js_share_container');
 
+const arrowupDesign = document.querySelector('.js-rotate-design');
+
 designLegend.addEventListener('click', (event) => {
   designContainer.classList.remove('collapsed');
   fillContainer.classList.add('collapsed');
   shareContainer.classList.add('collapsed');
+
+  arrowupDesign.classList.add('fa-chevron-up');
+  arrowupDesign.classList.remove('fa-chevron-down');
+  if (designContainer.classList.contains('collapsed')) {
+    arrowupDesign.classList.add('fa-chevron-down');
+  }
 });
 
 fillLegend.addEventListener('click', (event) => {

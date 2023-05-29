@@ -34,5 +34,17 @@
         display: flex;
         justify-content: flex-end;
         color: $gunmetal;
+        /*transform: rotateZ(180deg);*/
     }
+
+   /* .js-rotate {
+        transform: rotateZ(180deg);
+    }*/
+
+    .fa-chevron-up {
+        display: flex;
+        justify-content: flex-end;
+        color: $gunmetal;
+           
+}
 }
