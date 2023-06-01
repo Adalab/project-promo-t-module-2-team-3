@@ -15,12 +15,13 @@
     &__img{
         width: 103px;
     }
-}
-@media screen and (min-width: 768px) {
-    .footer{
+    @media screen and (min-width: 768px) {
         flex-direction: row;
         justify-content: space-between;
         padding: 0 30px;
         height: 6vh;
+    }
+    @media all and (min-width:1024px) {
+        height: 8vh;
     }
 }

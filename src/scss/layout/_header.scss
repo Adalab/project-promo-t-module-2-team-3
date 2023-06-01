@@ -1,9 +1,12 @@
 .header{
-    height: 11vh;
+    height: 110px;
     display: flex;
     align-items: center;
     &__logo{
         width: 200px;
         margin-left: 40px;
+    }
+    @media all and (min-width:768px) {
+        height: 14vh;
     }
 }
