@@ -19,9 +19,9 @@ const inputEmail = document.querySelector ('.js_input_email');
 const previewEmail = document.querySelector ('.rrss__link--email');
 function handleInputEmail(event){
     const emailValue = event.target.value;
-    previewEmail.href.innerHTML = emailValue;  //he añadido inner.html, ahora no da error en el navegardor y se abre la app de envio de mails
+    previewEmail.href = `Mailto:${emailValue}`;  //he añadido inner.html, ahora no da error en el navegardor y se abre la app de envio de mails
 }
-inputEmail.addEventListener ('input',handleInputEmail); 
+inputEmail.addEventListener ('input',handleInputEmail);
 
 const inputTel = document.querySelector ('.js_input_tel');
 const previewTel = document.querySelector ('.rrss__link--tel');
@@ -34,16 +34,17 @@ inputTel.addEventListener ('input',handleInputTel);  //he cambiado el inputMail 
 const inputLinkedin = document.querySelector ('.js_input_linkedin');
 const previewLinkedin = document.querySelector ('.rrss__link--linkedin');
 function handleInputLinkedin(event){
-    const linkedinValue = event.target.value;
-    previewLinkedin.href = linkedinValue; //he sustituido html (previewLinkedin.html )por href
+  const linkedinValue = event.target.value;
+  previewLinkedin.href = linkedinValue; //he sustituido html (previewLinkedin.html )por href
 }
-inputLinkedin.addEventListener ('input',handleInputLinkedin); 
+inputLinkedin.addEventListener ('input',handleInputLinkedin);
 
 const inputGithub = document.querySelector ('.js_input_github');
 const previewGithub = document.querySelector ('.rrss__link--github');
 function handleInputGithub(event){
-    const githubValue = event.target.value;
-    previewGithub.href.innerHTML = githubValue;
+  event.preventDefault();
+  const githubValue = event.target.value;
+  previewGithub.href = githubValue;
 }
 inputGithub.addEventListener ('input', handleInputGithub);
 
