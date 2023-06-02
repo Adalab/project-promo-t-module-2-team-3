@@ -27,7 +27,7 @@ const inputTel = document.querySelector ('.js_input_tel');
 const previewTel = document.querySelector ('.rrss__link--tel');
 function handleInputTel(event){
     const telValue = event.target.value;
-    previewTel.href = telValue;
+    previewTel.href = `Tel:${telValue}`;
 }
 inputTel.addEventListener ('input',handleInputTel);  //he cambiado el inputMail del evento por el inputTel, ahora no resetea la pag
 
