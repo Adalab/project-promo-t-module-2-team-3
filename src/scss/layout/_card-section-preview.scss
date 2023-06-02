@@ -6,10 +6,14 @@
     align-items: center;
     height: 95%;
     @media all and (min-width:768px) {
-            align-items: center;
-            border-radius: 10px;
-            margin-right: 40px;
-        }
+        align-items: center;
+        border-radius: 10px;
+        margin-right: 40px;
+        align-self: center;
+    }
+    @media all and (min-width:1024px){
+        width: 60vw;
+    }
     &__container {
         margin-left: 15px;
         padding-top: 38px;
@@ -93,11 +97,5 @@
                 margin-left: 15px;
             }
         }
-    }
-}
-@media all and (min-width:1024px){
-    .preview{
-        width: 60vw;
-        min-height: 700px;
     }
 }
