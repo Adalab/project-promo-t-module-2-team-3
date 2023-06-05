@@ -62,3 +62,13 @@
     display: flex;
     flex-direction: row;
 }
+.container_inputs_github{
+    display: flex;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 30px;
+}
+.arroba{
+    border: solid 1px $hospital-green;
+    color: gray;
+}
