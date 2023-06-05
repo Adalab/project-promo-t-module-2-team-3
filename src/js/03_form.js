@@ -1,17 +1,18 @@
-'use strict';
-const inputName = document.querySelector('.js_input_name');
-const previewName = document.querySelector('.card__info--name');
-function handleInputName(event) {
-  const inputValue = event.target.value;
-  previewName.innerHTML = inputValue;
+'use strict'
+const inputName = document.querySelector ('.js_input_name');
+const previewName = document.querySelector ('.card__info--name');
+function handleInputName(event){
+    const inputValue = event.target.value || 'Nombre Apellido';
+    previewName.innerHTML= inputValue;
+
 }
 inputName.addEventListener('input', handleInputName);
 
-const inputJob = document.querySelector('.js_input_job');
-const previewJob = document.querySelector('.card__info--job');
-function handleInputJob(event) {
-  const jobValue = event.target.value;
-  previewJob.innerHTML = jobValue;
+const inputJob = document.querySelector ('.js_input_job');
+const previewJob = document.querySelector ('.card__info--job');
+function handleInputJob(event){
+    const jobValue = event.target.value || 'Front-end developer';
+    previewJob.innerHTML=jobValue;
 }
 inputJob.addEventListener('input', handleInputJob);
 
