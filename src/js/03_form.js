@@ -4,8 +4,9 @@ const previewName = document.querySelector ('.card__info--name');
 function handleInputName(event){
     const inputValue = event.target.value || 'Nombre Apellido';
     previewName.innerHTML= inputValue;
+
 }
-inputName.addEventListener ('input',handleInputName);
+inputName.addEventListener('input', handleInputName);
 
 const inputJob = document.querySelector ('.js_input_job');
 const previewJob = document.querySelector ('.card__info--job');
@@ -13,7 +14,8 @@ function handleInputJob(event){
     const jobValue = event.target.value || 'Front-end developer';
     previewJob.innerHTML=jobValue;
 }
-inputJob.addEventListener ('input',handleInputJob);
+inputJob.addEventListener('input', handleInputJob);
+
 
 const inputEmail = document.querySelector ('.js_input_email');
 const previewEmail = document.querySelector ('.rrss__link--email');
@@ -47,4 +49,16 @@ function handleInputGithub(event){
   previewGithub.href = githubValue;
 }
 inputGithub.addEventListener ('input', handleInputGithub);
+const createButton = document.querySelector('.js_createbutton');
+const createError = document.querySelector('.js - create - error');
+function handleCreateButton(event) {
+  if (
+    inputName === '' ||
+    inputJob === '' ||
+    inputTel === '' ||
+    inputEmail === ''
+  ) {
+    createError.innerHTML = 'Rellena todos los campos obligatorios';
+  }
+}
 
