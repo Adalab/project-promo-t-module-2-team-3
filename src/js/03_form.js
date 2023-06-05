@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 const inputName = document.querySelector ('.js_input_name');
 const previewName = document.querySelector ('.card__info--name');
 function handleInputName(event){
@@ -50,7 +50,7 @@ function handleInputGithub(event){
 }
 inputGithub.addEventListener ('input', handleInputGithub);
 const createButton = document.querySelector('.js_createbutton');
-const createError = document.querySelector('.js - create - error');
+const createError = document.querySelector('.js-create-error');
 function handleCreateButton(event) {
   if (
     inputName === '' ||
@@ -61,4 +61,3 @@ function handleCreateButton(event) {
     createError.innerHTML = 'Rellena todos los campos obligatorios';
   }
 }
-
