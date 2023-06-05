@@ -1,6 +1,42 @@
 
 <article class="art2 js_fill_container collapsed">
   <label for="name">
+    <span class="span">Nombre completo </span>
+    <input
+      class="rectangle js_input_name"
+      type="text"
+      name="nombre"
+      id="name"
+      autocomplete="name"
+      required
+      placeholder=" Ej: Sally Jill"
+    />
+  </label>
+  <label for="puesto">
+    <span class="span">Puesto</span>
+    <input
+      class="rectangle js_input_job"
+      type="text"
+      name="puesto"
+      id="puesto"
+      autocomplete="puesto"
+      required
+      placeholder="Ej:Front-end unicorn"
+    />
+  </label>
+
+  <span class="span">Imagen de perfil</span>
+  <div class="img_button_box">
+    <button class="img_button">
+      <i class="add_img"></i
+      ><a class="add_button--link" href="">Añadir Imagen</a>
+    </button>
+    <div class="square"></div>
+  </div>
+
+
+<article class="art2 js_fill_container collapsed">
+  <label for="name">
     <span class="span">Nombre completo *</span>
     <input
       class="rectangle js_input_name"
@@ -38,6 +74,7 @@
 
   <label for="mail">
     <span class="span">Email *</span>
+
     <input
       class="rectangle js_input_email"
       type="email"
@@ -48,12 +85,14 @@
     />
   </label>
   <label for="tlf">
+
     <span class="span">Teléfono *</span>
     <input
       class="rectangle js_input_tel"
       type="tel"
       name="tlf"
       id="tlf"
+
       placeholder="Ej: 555-555-555"
     />
   </label>
@@ -64,10 +103,12 @@
       type="text"
       name="linkedin"
       id="linkedin"
+
       placeholder="Ej: linkedin.com/in/sally.jill"
     />
   </label>
   <label for="github">
+
     <span class="span js_input_github">GitHub</span>
     <input
       class="rectangle"
@@ -78,4 +119,5 @@
     />
   </label>
   <p>Todos los campos marcados con * son obligatorios</p>
+
 </article>
