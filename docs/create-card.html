@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Awesome profile-cards</title>
+    <script
+      src="https://kit.fontawesome.com/5168f8ef34.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="icon" href="./assets/images/favicon.png" />
+  </head>
+  <body>
+    <header class="header">
+        <a href="./index.html"><img class="header__logo" src="./assets/images/logo-awesome-profile-cards.svg"/></a>
+    </header>
+    <main class="main">
+      <section class="preview">
+        <div class="preview__container">
+          <a href="#" class="reset__button"
+            ><i class="fa-regular fa-trash-can"></i>reset</a
+          >
+          <div class="preview__card js_preview__card">
+            <div class="card__info">
+              <h2 class="card__info--name">Nombre Apellido</h2>
+              <p class="card__info--job">Front-end developer</p>
+            </div>
+
+                  <img src="http://placekitten.com/240/200" alt="Profile Image" class="card__img">
+                  <div class="card__rrss">
+                      <a href="" class="rrss__link rrss__link--tel"><i class="fa-solid fa-mobile-screen-button"></i></a>
+                      <a href="" class="rrss__link rrss__link--email"><i class="fa-regular fa-envelope"></i></a>
+                      <a href="" class="rrss__link rrss__link--linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                      <a href="" class="rrss__link rrss__link--github"><i class="fa-brands fa-github-alt"></i></a>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section__form">
+        <form class="form" action="">
+          <fieldset class="fieldset">
+            <legend class="fieldset__div js_design_legend ">
+              <i
+                class="fa-regular fa-object-ungroup element-icon"
+                style="color: #e17334"
+              ></i>
+              <h3 class="div__title">Diseña</h3>
+              <i class="fa-solid fa-chevron-down js-rotate-design"></i>
+            </legend>
+            <div class="colors js_design_container collapsed">
+              <label>
+                <p class="colors__p">COLORES</p>
+              </label>
+
+              <div class="main__box">
+                <div class="radio__button">
+                  <input
+                    class="radio__check js_radio1"
+                    type="radio"
+                    id="option1"
+                    name="options"
+                    value="option1"
+                  />
+                  <div class="color__list">
+                    <div class="color__box box__1"></div>
+                    <div class="color__box box__2"></div>
+                    <div class="color__box box__3"></div>
+                  </div>
+                </div>
+                <div class="radio__button">
+                  <input
+                    class="radio__check js_radio2"
+                    type="radio"
+                    id="option2"
+                    name="options"
+                    value="option2"
+                  />
+                  <div class="color__list">
+                    <div class="color__box box__4"></div>
+                    <div class="color__box box__5"></div>
+                    <div class="color__box box__6"></div>
+                  </div>
+                </div>
+                <div class="radio__button">
+                  <input
+                    class="radio__check js_radio3"
+                    type="radio"
+                    id="option3"
+                    name="options"
+                    value="option3"
+                  />
+                  <div class="color__list">
+                    <div class="color__box box__7"></div>
+                    <div class="color__box box__8"></div>
+                    <div class="color__box box__9"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </fieldset>
+
+          <fieldset class="fieldset">
+            <legend class="fieldset__div js_fill_legend">
+              <i class="fa-solid fa-keyboard element-icon" style="color: #e17334"></i>
+              <h3 class="div__title">Rellena</h3>
+              <i class="fa-solid fa-chevron-down js-rotate-fill"></i>
+            </legend>
+            <article class="art2 js_fill_container collapsed" >
+                    <label for="name">
+                        <span class="span">Nombre completo </span>
+                        <input class="rectangle js_input_name" type="text" name="nombre" id="name" autocomplete="name" required
+                            placeholder=" Ej: Sally Jill" />
+                    </label>
+                    <label for="puesto">
+                        <span class="span">Puesto</span>
+                        <input class="rectangle js_input_job" type="text" name="puesto" id="puesto" autocomplete="puesto" required
+                            placeholder="Ej:Front-end unicorn" />
+                    </label>
+
+                    <span class="span">Imagen de perfil</span>
+                   <div class="img_button_box">
+                    <button class="img_button">
+                        <i class="add_img"></i
+                        ><a class="add_button--link" href=""
+                          >Añadir Imagen</a
+                        >
+                      </button>
+                      <div class="square"></div>
+                    </div>
+
+                    <label for="mail">
+                        <span class="span">Email </span>
+                        <input class="rectangle js_input_email" type="email" name="mail" id="mail" autocomplete="email" required
+                            placeholder="Ej: Sally-Jill@gmail.com" />
+                    </label>
+                    <label for="tlf">
+                        <span class="span">Teléfono</span>
+                        <input class="rectangle js_input_tel" type="tel" name="tlf" id="tlf" required placeholder="Ej: 555-555-555" />
+                    </label>
+                    <label for="linkedin">
+                        <span class="span">Linkedin</span>
+                        <input class="rectangle js_input_linkedin" type="text" name="linkedin" id="linkedin" required
+                            placeholder="Ej: linkedin.com/in/sally.jill" />
+                    </label>
+                    <label for="github">
+                        <span class="span js_input_github">GitHub</span>
+                        <input class=" rectangle" type="text" name="github" id="github" required placeholder="Ej: @Sally-Jill" />
+                    </label>
+            </article>
+          </fieldset>
+          <fieldset class="fieldset">
+            <legend class="fieldset__div js_share_legend">
+              <i
+                class="fa-sharp fa-solid fa-share-nodes element-icon"
+                style="color: #e17334"
+              ></i>
+              <h3 class="div__title">Comparte</h3>
+              <i class="fa-solid fa-chevron-down js-rotate-share"></i>
+            </legend>
+            <section class="share js_share_container collapsed">
+              <div class="share__create">
+                <button class="share__create--button disabled">
+                  <i class="fa-regular fa-address-card"></i>
+                  <a href="./img/identificacion.png"></a>CREAR TARJETA
+                </button>
+              </div>
+
+              <div class="share__container">
+                <p class="share__container--text">La tarjeta ha sido creada:</p>
+                <p class="share__container--link">
+                  https://awesome-profile-card.com?id=A456df0001
+                </p>
+                <button class="share__container--button">
+                  <i class="fa-brands fa-twitter"></i
+                  ><a class="share__button--link" href="https://twitter.com/"
+                    >Compartir en Twitter</a
+                  >
+                </button>
+              </div>
+            </section>
+            <!--
+            const button = doc.querySelector()
+
+            button.classList.add('disabled')
+            button.disable = false;
+            -->
+
+          </fieldset>
+        </form>
+      </section>
+
+    </main>
+    <footer class="footer">
+        <p class="footer__copy">Awosome profile-cards &copy;2023</p>
+        <img class="footer__img" src="./assets/images/logo-adalab.png"/>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
