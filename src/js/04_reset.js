@@ -25,7 +25,7 @@ const handleClickReset = (event) => {
   radio1.checked = true;
   previewCard.classList.add('palette1');
   previewCard.classList.remove('palette2');
-  previewCard.classList.remove('palette3')
+  previewCard.classList.remove('palette3');
 };
 
   /*
