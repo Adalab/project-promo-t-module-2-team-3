@@ -22,7 +22,7 @@ const handleClickReset = (event) => {
   designContainer.classList.remove('collapsed');
   fillContainer.classList.add('collapsed');
   shareContainer.classList.add('collapsed');
-  radio1.setAttribute('checked','checked');
+  radio1.checked = true;
   previewCard.classList.add('palette1');
   previewCard.classList.remove('palette2');
   previewCard.classList.remove('palette3')
