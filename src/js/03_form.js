@@ -1,24 +1,11 @@
-'use strict';
-const previewName = document.querySelector('.card__info--name');
-const previewJob = document.querySelector('.card__info--job');
-const previewEmail = document.querySelector('.rrss__link--email');
-const previewTel = document.querySelector('.rrss__link--tel');
-const createButton = document.querySelector('.js_createbutton');
-const createError = document.querySelector('.js-create-error');
-const previewLinkedin = document.querySelector('.rrss__link--linkedin');
-const previewGithub = document.querySelector('.rrss__link--github');
-const form = document.querySelector('.js_form');
-
-let dataPreview = {
-  palette: '',
-  name: '',
-  job: '',
-  email: '',
-  tel: '',
-  linkedin: '',
-  github: '',
-  photo: '',
-};
+function renderCard(dataPreview) {
+  previewName.innerHTML = dataPreview.name || 'Nombre Apellido';
+  previewJob.innerHTML = dataPreview.job || 'Front-end developer';
+  previewEmail.href = `Mailto:${dataPreview.email}`;
+  previewTel.href = `Tel:${dataPreview.tel}`;
+  previewLinkedin.href = `https://www.${dataPreview.linkedin}`;
+  previewGithub.href = `https://github.com/${dataPreview.github}`;
+}
 
 function handleInputs(event) {
   const idInput = event.target.id;
@@ -40,47 +27,19 @@ function handleInputs(event) {
   } else if (idInput === 'photo') {
     dataPreview.photo = valueInput;
   }
-}
-
-function handleInputName(event) {
-  const inputValue = event.target.value || 'Nombre Apellido';
-  previewName.innerHTML = inputValue;
-}
-function handleInputJob(event) {
-  const jobValue = event.target.value || 'Front-end developer';
-  previewJob.innerHTML = jobValue;
-}
-function handleInputEmail(event) {
-  const emailValue = event.target.value;
-  previewEmail.href = `Mailto:${emailValue}`;
-}
-function handleInputTel(event) {
-  const telValue = event.target.value;
-  previewTel.href = `Tel:${telValue}`;
-}
-function handleInputLinkedin(event) {
-  const linkedinValue = event.target.value;
-  previewLinkedin.href = `https://www.${linkedinValue}`;
-}
-function handleInputGithub(event) {
-  event.preventDefault();
-  const githubValue = event.target.value;
-  const newGithubValue = githubValue.slice(1);
-  previewGithub.href = `https://github.com/${newGithubValue}`;
+  renderCard(dataPreview);
 }
 function handleCreateButton(event) {
   if (
-    inputName === '' ||
-    inputJob === '' ||
-    inputTel === '' ||
-    inputEmail === ''
+    dataPreview.name === '' ||
+    dataPreview.job === '' ||
+    dataPreview.tel === '' ||
+    dataPreview.email === '' ||
+    dataPreview.photo === ''
   ) {
     createError.innerHTML = 'Rellena todos los campos obligatorios';
+  } else {
+    fetch('https://dev.adalab.es/api/card/');
   }
 }
-inputName.addEventListener('input', handleInputs);
-inputEmail.addEventListener('input', handleInputEmail);
-inputTel.addEventListener('input', handleInputTel);
-inputGithub.addEventListener('input', handleInputGithub);
-inputJob.addEventListener('input', handleInputJob);
-inputLinkedin.addEventListener('input', handleInputLinkedin);
+form.addEventListener('input', handleInputs);

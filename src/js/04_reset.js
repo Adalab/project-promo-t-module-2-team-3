@@ -1,8 +1,3 @@
-'use strict';
-
-const resetButton = document.getElementById('reset');
-const cardName = document.querySelector('.js_card-name');
-const cardJob = document.querySelector('.js_card-job');
 const handleClickReset = (event) => {
   event.preventDefault();
   const radio1 = document.querySelector('.js_radio1');

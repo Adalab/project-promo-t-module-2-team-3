@@ -1,10 +1,3 @@
-'use strict';
-
-const radio1 = document.querySelector('.js_radio1');
-const radio2 = document.querySelector('.js_radio2');
-const radio3 = document.querySelector('.js_radio3');
-const previewCard = document.querySelector('.js_preview__card');
-
 function handleClickRadio1(event) {
   previewCard.classList.remove('palette2', 'palette3');
   previewCard.classList.add('palette1');
