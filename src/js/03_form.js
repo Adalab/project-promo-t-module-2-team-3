@@ -43,10 +43,12 @@ inputLinkedin.addEventListener ('input',handleInputLinkedin);
 
 const inputGithub = document.querySelector ('.js_input_github');
 const previewGithub = document.querySelector ('.rrss__link--github');
+
 function handleInputGithub(event){
   event.preventDefault();
   const githubValue = event.target.value;
-  previewGithub.href = `https://github.com/${githubValue}`;
+  const newGithubValue = githubValue.slice(1);
+  previewGithub.href = `https://github.com/${newGithubValue}`;
 }
 inputGithub.addEventListener ('input', handleInputGithub);
 const createButton = document.querySelector('.js_createbutton');
