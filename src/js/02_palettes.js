@@ -11,7 +11,7 @@ function handleClickRadio3(event) {
   previewCard.classList.add('palette3');
 }
 
-function handleClickRadio(event) {
+/*function handleClickRadio(event) {
   for (const input of radio) {
     if (dataPreview.palette === 1) {
       handleClickRadio1();
@@ -21,5 +21,7 @@ function handleClickRadio(event) {
       handleClickRadio3();
     }
   }
-}
-input.addEventListener('click', handleClickRadio);
+}*/
+radio1.addEventListener('click', handleClickRadio1);
+radio2.addEventListener('click', handleClickRadio2);
+radio3.addEventListener('click', handleClickRadio3);
