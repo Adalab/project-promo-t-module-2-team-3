@@ -1,4 +1,3 @@
-'use strict';
 function handleClickRadio1(event) {
   previewCard.classList.remove('palette2', 'palette3');
   previewCard.classList.add('palette1');
@@ -18,10 +17,13 @@ radioCont.addEventListener('click', handleClickRadio);
 function handleClickRadio(event) {
   if(event.target.parentNode.classList.contains('js_radio-one')) {
     handleClickRadio1();
+    radio1.checked = true;
   } else if (event.target.parentNode.classList.contains('js_radio-two')) {
     handleClickRadio2();
+    radio2.checked = true;
   } else if (event.target.parentNode.classList.contains('js_radio-three')) {
-    handleClickRadio3;
+    handleClickRadio3();
+    radio3.checked = true;
   }
 }
 
