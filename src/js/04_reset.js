@@ -18,6 +18,7 @@ const handleClickReset = (event) => {
   inputLinkedin.value = '';
   inputTel.value = '';
   inputGithub.value ='';
+  profileImage.style= '';
   // data object
   dataPreview = {
     palette: '',
@@ -36,5 +37,6 @@ const handleClickReset = (event) => {
   previewTel.href = '';
   previewLinkedin.href = '';
   previewGithub.href = '';
+  rotateArrow();
 };
 resetButton.addEventListener('click', handleClickReset);

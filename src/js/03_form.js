@@ -11,7 +11,6 @@ function handleInputs(event) {
   const idInput = event.target.id;
   const valueInput = event.target.value;
   console.log(idInput, valueInput);
-
   if (idInput === 'name') {
     dataPreview.name = valueInput;
   } else if (idInput === 'job') {
