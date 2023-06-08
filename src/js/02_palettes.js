@@ -1,3 +1,4 @@
+'use strict';
 function handleClickRadio1(event) {
   previewCard.classList.remove('palette2', 'palette3');
   previewCard.classList.add('palette1');
@@ -11,17 +12,17 @@ function handleClickRadio3(event) {
   previewCard.classList.add('palette3');
 }
 
-/*function handleClickRadio(event) {
-  for (const input of radio) {
-    if (dataPreview.palette === 1) {
-      handleClickRadio1();
-    } else if (dataPreview.palette === 2) {
-      handleClickRadio2();
-    } else if (dataPreview.palette === 3) {
-      handleClickRadio3();
-    }
+const radioCont = document.querySelector('.main__box');
+
+radioCont.addEventListener('click', handleClickRadio);
+function handleClickRadio(event) {
+  if(event.target.parentNode.classList.contains('js_radio-one')) {
+    handleClickRadio1();
+  } else if (event.target.parentNode.classList.contains('js_radio-two')) {
+    handleClickRadio2();
+  } else if (event.target.parentNode.classList.contains('js_radio-three')) {
+    handleClickRadio3;
   }
-}*/
-radio1.addEventListener('click', handleClickRadio1);
-radio2.addEventListener('click', handleClickRadio2);
-radio3.addEventListener('click', handleClickRadio3);
+}
+
+

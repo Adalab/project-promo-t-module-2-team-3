@@ -23,7 +23,9 @@ function handleInputs(event) {
   } else if (idInput === 'linkedin') {
     dataPreview.linkedin = valueInput;
   } else if (idInput === 'github') {
-    dataPreview.github = valueInput;
+    const githubValue = valueInput;
+    const newGithubValue = githubValue.slice(1);
+    dataPreview.github = newGithubValue;
   } else if (idInput === 'photo') {
     dataPreview.photo = valueInput;
   } else if (idInput.includes('option')) {
