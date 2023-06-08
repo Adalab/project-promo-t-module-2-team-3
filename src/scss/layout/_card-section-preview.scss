@@ -70,11 +70,14 @@
             }
         }
     }
-    .card__img {
+    .card__containerimg {
         display:block;
-        width: 100%;
+        width: 230px;
+        height: 200px;
+        background-image: url("http://placekitten.com/240/200");
+    }
+    .card__containerimg--src{
         object-fit: cover;
-        
     }
     .card__rrss{
         .rrss__link {

@@ -6,7 +6,7 @@ const profileImage = document.querySelector('.js__profile-image');
 const profilePreview = document.querySelector('.js__profile-preview');
 
 
-/**
+/*
  * Recoge el archivo añadido al campo de tipo "file"
  * y lo carga en nuestro objeto FileReader para que 
  * lo convierta a algo con lo que podamos trabajar.
@@ -25,16 +25,18 @@ function getImage(e){
  * Una vez tenemos los datos listos en el FR podemos
  * trabajar con ellos ;)
  */
+const img = document.querySelector('.js_preview_container');
 function writeImage() {
   /* En la propiedad `result` de nuestro FR se almacena
    * el resultado. Ese resultado de procesar el fichero que hemos cargado
    * podemos pasarlo como background a la imagen de perfil y a la vista previa
    * de nuestro componente.
-   */
+  */
   profileImage.style.backgroundImage = `url(${fr.result})`;
-  profilePreview.style.backgroundImage = `url(${fr.result})`;
+  const newImg = `
+    <img src=${previewCard.photo} alt= Foto de perfil class= card__containerimg--src js_profile-preview`
+    img.innerHTML = newImg;
 }
-
 
 /**
  * Añadimos los listeners necesarios:

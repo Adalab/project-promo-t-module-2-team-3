@@ -22,6 +22,7 @@ const inputGithub = document.querySelector('.js_input_github');
 const previewCard = document.querySelector('.js_preview__card');
 const previewName = document.querySelector('.card__info--name');
 const previewJob = document.querySelector('.card__info--job');
+const previewPhoto = document.querySelector ('.js__profile-preview');
 const previewEmail = document.querySelector('.rrss__link--email');
 const previewTel = document.querySelector('.rrss__link--tel');
 const createButton = document.querySelector('.js_createbutton');

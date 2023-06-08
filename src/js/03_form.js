@@ -6,7 +6,6 @@ function renderCard(dataPreview) {
   previewLinkedin.href = `https://www.${dataPreview.linkedin}`;
   previewGithub.href = `https://github.com/${dataPreview.github}`;
 }
-
 function handleInputs(event) {
   const idInput = event.target.id;
   const valueInput = event.target.value;
