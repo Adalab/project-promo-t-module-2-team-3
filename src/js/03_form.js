@@ -26,6 +26,8 @@ function handleInputs(event) {
     dataPreview.github = valueInput;
   } else if (idInput === 'photo') {
     dataPreview.photo = valueInput;
+  } else if (idInput.includes('option')) {
+    dataPreview.palette = valueInput;
   }
   renderCard(dataPreview);
 }

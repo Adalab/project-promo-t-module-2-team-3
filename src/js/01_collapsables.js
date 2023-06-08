@@ -1,5 +1,3 @@
-'use strict';
-
 function rotateArrow(event) {
   if (designContainer.classList.contains('collapsed')) {
     rotateDesign.classList.remove('rotate');

@@ -12,6 +12,7 @@ const collapseParent = document.querySelectorAll('.js_collapse_parent');
 const radio1 = document.querySelector('.js_radio1');
 const radio2 = document.querySelector('.js_radio2');
 const radio3 = document.querySelector('.js_radio3');
+const radio = document.querySelectorAll('.radio__check');
 const previewCard = document.querySelector('.js_preview__card');
 const previewName = document.querySelector('.card__info--name');
 const previewJob = document.querySelector('.card__info--job');
