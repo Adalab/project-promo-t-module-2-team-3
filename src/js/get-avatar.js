@@ -8,7 +8,6 @@ function getImage(e){
   fr.addEventListener('load', writeImage);
   fr.readAsDataURL(myFile);
 }
-const img = document.querySelector('.js_preview_container');
 function writeImage() {
   profileImage.style.backgroundImage = `url(${fr.result})`;
   img.style.backgroundImage = `url(${fr.result})`;

@@ -45,3 +45,4 @@ let dataPreview = {
   github: '',
   photo: '',
 };
+const img = document.querySelector('.js_preview_container');
