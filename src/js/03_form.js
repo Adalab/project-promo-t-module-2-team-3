@@ -6,7 +6,6 @@ function renderCard(dataPreview) {
   previewLinkedin.href = `https://www.${dataPreview.linkedin}`;
   previewGithub.href = `https://github.com/${dataPreview.github}`;
 }
-
 function handleInputs(event) {
   const idInput = event.target.id;
   const valueInput = event.target.value;
@@ -33,16 +32,24 @@ function handleInputs(event) {
   renderCard(dataPreview);
 }
 function handleCreateButton(event) {
-  if (
-    dataPreview.name === '' ||
-    dataPreview.job === '' ||
-    dataPreview.tel === '' ||
-    dataPreview.email === '' ||
-    dataPreview.photo === ''
-  ) {
-    createError.innerHTML = 'Rellena todos los campos obligatorios';
-  } else {
-    fetch('https://dev.adalab.es/api/card/');
-  }
+  event.preventDefault();
+  fetch('https://dev.adalab.es/api/card/',{
+    method: 'POST',
+    headers: {'content-type':'application/json'},
+    body: JSON.stringify(dataPreview),
+  })
+  .then((response) => response.json())
+  .then((data) => {
+    dataPreview = data;
+    if (data.succes) {
+      sectionShare.classList.remove('collapsed');
+      cardURL.innerHTML = data.cardURL;
+      cardURL.href = data.cardURL;
+    } else {
+      console.log(data);
+      createError.innerHTML = 'Rellena todos los campos obligatorios';
+    }
+  });
 }
 form.addEventListener('input', handleInputs);
+createButton.addEventListener ('click', handleCreateButton);
