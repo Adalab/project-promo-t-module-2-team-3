@@ -1,3 +1,9 @@
+'use strict';
+const designLegend = document.querySelector('.js_design_legend');
+const fillLegend = document.querySelector('.js_fill_legend');
+const shareLegend = document.querySelector('.js_share_legend');
+
+
 function rotateArrow(event) {
   if (designContainer.classList.contains('collapsed')) {
     rotateDesign.classList.remove('rotate');

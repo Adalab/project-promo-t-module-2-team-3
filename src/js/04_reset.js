@@ -31,6 +31,7 @@ const handleClickReset = (event) => {
     photo: '',
   };
   // card preview
+  img.style = '';
   cardName.innerHTML = 'Nombre Apellido';
   cardJob.innerHTML = 'Front-end developer';
   previewEmail.href = '';
