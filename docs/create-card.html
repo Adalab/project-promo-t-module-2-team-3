@@ -28,21 +28,20 @@
     <main class="main">
       <section class="preview">
         <div class="preview__container">
-          <a href="#" class="reset__button"
+          <a href="" id="reset" class="reset__button"
             ><i class="fa-regular fa-trash-can"></i>reset</a
           >
           <div class="preview__card js_preview__card">
             <div class="card__info">
-              <h2 class="card__info--name">Nombre Apellido</h2>
-              <p class="card__info--job">Front-end developer</p>
+              <h2 class="card__info--name js_card-name">Nombre Apellido</h2>
+              <p class="card__info--job js_card-job">Front-end developer</p>
             </div>
-
-                  <img src="http://placekitten.com/240/200" alt="Profile Image" class="card__img">
+                  <img src="http://placekitten.com/240/200" alt="Profile Image" class="card__img js__profile-preview">
                   <div class="card__rrss">
-                      <a href="" class="rrss__link rrss__link--tel"><i class="fa-solid fa-mobile-screen-button"></i></a>
-                      <a href="" class="rrss__link rrss__link--email"><i class="fa-regular fa-envelope"></i></a>
-                      <a href="" class="rrss__link rrss__link--linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
-                      <a href="" class="rrss__link rrss__link--github"><i class="fa-brands fa-github-alt"></i></a>
+                      <a href="tel:" target="_blank" class="rrss__link rrss__link--tel"><i class="fa-solid fa-mobile-screen-button"></i></a>
+                      <a href="mailto:" target="_blank" class="rrss__link rrss__link--email"><i class="fa-regular fa-envelope"></i></a>
+                      <a href="" target="_blank" class="rrss__link rrss__link--linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                      <a href="https://github.com/" target="_blank" class="rrss__link rrss__link--github"><i class="fa-brands fa-github-alt"></i></a>
                   </div>
               </div>
           </div>
@@ -50,9 +49,9 @@
       </section>
 
       <section class="section__form">
-        <form class="form" action="">
-          <fieldset class="fieldset">
-            <legend class="fieldset__div js_design_legend ">
+        <form class="form js_form" action="">
+          <fieldset class="fieldset js_collapse_parent">
+            <legend class="fieldset__div js_design_legend js_collapse_header">
               <i
                 class="fa-regular fa-object-ungroup element-icon"
                 style="color: #e17334"
@@ -60,49 +59,51 @@
               <h3 class="div__title">Diseña</h3>
               <i class="fa-solid fa-chevron-down js-rotate-design"></i>
             </legend>
-            <div class="colors js_design_container collapsed">
+            <div class="colors js_design_container js_collapse_container">
               <label>
                 <p class="colors__p">COLORES</p>
               </label>
-
               <div class="main__box">
-                <div class="radio__button">
+                <div class="radio__button js_radio-one">
                   <input
+                    checked
                     class="radio__check js_radio1"
                     type="radio"
                     id="option1"
                     name="options"
-                    value="option1"
+                    value="1"
                   />
-                  <div class="color__list">
+                  <div class="color__list js_radio-one">
                     <div class="color__box box__1"></div>
                     <div class="color__box box__2"></div>
                     <div class="color__box box__3"></div>
                   </div>
                 </div>
-                <div class="radio__button">
+
+                <div class="radio__button js_radio-two">
                   <input
                     class="radio__check js_radio2"
                     type="radio"
                     id="option2"
                     name="options"
-                    value="option2"
+                    value="2"
                   />
-                  <div class="color__list">
+                  <div class="color__list js_radio-two">
                     <div class="color__box box__4"></div>
                     <div class="color__box box__5"></div>
                     <div class="color__box box__6"></div>
                   </div>
                 </div>
-                <div class="radio__button">
+
+                <div class="radio__button js_radio-three">
                   <input
                     class="radio__check js_radio3"
                     type="radio"
                     id="option3"
                     name="options"
-                    value="option3"
+                    value="3"
                   />
-                  <div class="color__list">
+                  <div class="color__list js_radio-three">
                     <div class="color__box box__7"></div>
                     <div class="color__box box__8"></div>
                     <div class="color__box box__9"></div>
@@ -113,57 +114,100 @@
 
           </fieldset>
 
-          <fieldset class="fieldset">
-            <legend class="fieldset__div js_fill_legend">
+          <fieldset class="fieldset js_collapse_parent">
+            <legend class="fieldset__div js_fill_legend js_collapse_header">
               <i class="fa-solid fa-keyboard element-icon" style="color: #e17334"></i>
               <h3 class="div__title">Rellena</h3>
               <i class="fa-solid fa-chevron-down js-rotate-fill"></i>
             </legend>
-            <article class="art2 js_fill_container collapsed" >
-                    <label for="name">
-                        <span class="span">Nombre completo </span>
-                        <input class="rectangle js_input_name" type="text" name="nombre" id="name" autocomplete="name" required
-                            placeholder=" Ej: Sally Jill" />
-                    </label>
-                    <label for="puesto">
-                        <span class="span">Puesto</span>
-                        <input class="rectangle js_input_job" type="text" name="puesto" id="puesto" autocomplete="puesto" required
-                            placeholder="Ej:Front-end unicorn" />
-                    </label>
+            <article class="art2 js_fill_container collapsed js_collapse_container">
+              <label for="name">
+                <span class="span">Nombre completo *</span>
+                <input
+                  class="rectangle js_input_name"
+                  type="text"
+                  name="nombre"
+                  id="name"
+                  autocomplete="name"
+                  placeholder=" Ej: Sally Jill"
+                />
+              </label>
+              <label for="puesto">
+                <span class="span">Puesto *</span>
+                <input
+                  class="rectangle js_input_job"
+                  type="text"
+                  name="puesto"
+                  id="job"
+                  autocomplete="puesto"
+                  placeholder="Ej:Front-end unicorn"
+                />
+              </label>
 
-                    <span class="span">Imagen de perfil</span>
-                   <div class="img_button_box">
-                    <button class="img_button">
-                        <i class="add_img"></i
-                        ><a class="add_button--link" href=""
-                          >Añadir Imagen</a
-                        >
-                      </button>
-                      <div class="square"></div>
-                    </div>
+              <span class="span">Imagen de perfil</span>
 
-                    <label for="mail">
-                        <span class="span">Email </span>
-                        <input class="rectangle js_input_email" type="email" name="mail" id="mail" autocomplete="email" required
-                            placeholder="Ej: Sally-Jill@gmail.com" />
-                    </label>
-                    <label for="tlf">
-                        <span class="span">Teléfono</span>
-                        <input class="rectangle js_input_tel" type="tel" name="tlf" id="tlf" required placeholder="Ej: 555-555-555" />
-                    </label>
-                    <label for="linkedin">
-                        <span class="span">Linkedin</span>
-                        <input class="rectangle js_input_linkedin" type="text" name="linkedin" id="linkedin" required
-                            placeholder="Ej: linkedin.com/in/sally.jill" />
-                    </label>
-                    <label for="github">
-                        <span class="span js_input_github">GitHub</span>
-                        <input class=" rectangle" type="text" name="github" id="github" required placeholder="Ej: @Sally-Jill" />
-                    </label>
+              <div class="img_button_box">
+                <div class="img_button">
+                  <label class="add_button--link" for="photo">Añadir imagen</label>
+                  <input
+                    class="js_imageBtn imagebtn js__profile-upload-btn"
+                    id="photo"
+                    type="file"
+                    name="photo"
+                    value="Añadir imagen"
+                  />
+                </div>
+                <div class="square js__profile-image"></div>
+              </div>
+
+              <label for="mail">
+                <span class="span">Email *</span>
+
+                <input
+                  class="rectangle js_input_email"
+                  type="email"
+                  name="email"
+                  id="email"
+                  autocomplete="email"
+                  placeholder="Ej: Sally-Jill@gmail.com"
+                />
+              </label>
+              <label for="tlf">
+                <span class="span">Teléfono *</span>
+                <input
+                  class="rectangle js_input_tel"
+                  type="tel"
+                  name="tel"
+                  id="tel"
+                  placeholder="Ej: 555-555-555"
+                />
+              </label>
+              <label for="linkedin">
+                <span class="span">Linkedin</span>
+                <input
+                  class="rectangle js_input_linkedin"
+                  type="text"
+                  name="linkedin"
+                  id="linkedin"
+                  placeholder="Ej: linkedin.com/in/sally.jill"
+                />
+              </label>
+              <label for="github">
+                <span class="span">GitHub</span>
+                <input
+                  class="rectangle js_input_github"
+                  type="text"
+                  name="github"
+                  id="github"
+                  placeholder="Ej: @Sally-Jill"
+                />
+              </label>
+              <p>Todos los campos marcados con * son obligatorios</p>
             </article>
+
           </fieldset>
-          <fieldset class="fieldset">
-            <legend class="fieldset__div js_share_legend">
+          <fieldset class="fieldset js_collapse_parent">
+            <legend class="fieldset__div js_share_legend js_collapse_header">
               <i
                 class="fa-sharp fa-solid fa-share-nodes element-icon"
                 style="color: #e17334"
@@ -171,7 +215,7 @@
               <h3 class="div__title">Comparte</h3>
               <i class="fa-solid fa-chevron-down js-rotate-share"></i>
             </legend>
-            <section class="share js_share_container collapsed">
+            <section class="share js_share_container collapsed js_collapse_container">
               <div class="share__create">
                 <button class="share__create--button disabled">
                   <i class="fa-regular fa-address-card"></i>
@@ -184,7 +228,7 @@
                 <p class="share__container--link">
                   https://awesome-profile-card.com?id=A456df0001
                 </p>
-                <button class="share__container--button">
+                <button class="share__container--button js_createbutton">
                   <i class="fa-brands fa-twitter"></i
                   ><a class="share__button--link" href="https://twitter.com/"
                     >Compartir en Twitter</a
