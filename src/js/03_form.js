@@ -36,8 +36,8 @@ function handleCreateButton(event) {
   fetch('https://dev.adalab.es/api/card/',{
     method: 'POST',
     headers: {'content-type':'application/json'},
-    body: JSON.stringify(data),
-  });
+    body: JSON.stringify(dataPreview),
+  })
   .then((response) => response.json())
   .then((data) => {
     dataPreview = data;
@@ -46,6 +46,7 @@ function handleCreateButton(event) {
       cardURL.innerHTML = data.cardURL;
       cardURL.href = data.cardURL;
     } else {
+      console.log(data);
       createError.innerHTML = 'Rellena todos los campos obligatorios';
     }
   });
