@@ -1,16 +1,17 @@
 <section class="share js_share_container collapsed js_collapse_container">
   <div class="share__create">
-    <button class="share__create--button disabled">
+    <button class="share__create--button">
       <i class="fa-regular fa-address-card"></i>
-      <a href="./img/identificacion.png"></a>CREAR TARJETA
+      <a class="create-link js_createbutton" href="./img/identificacion.png">CREAR TARJETA</a>
     </button>
+    <p class="error-message js-create-error"></p>
   </div>
 
-  <div class="share__container">
+  <div class="share__container collapsed js_share_section">
     <p class="share__container--text">La tarjeta ha sido creada:</p>
-    <p class="share__container--link">
-      https://awesome-profile-card.com?id=A456df0001
-    </p>
+    <a class="share__container--link js_card-link" href="">
+      
+    </a>
     <button class="share__container--button js_createbutton">
       <i class="fa-brands fa-twitter"></i
       ><a class="share__button--link" href="https://twitter.com/"
@@ -19,9 +20,3 @@
     </button>
   </div>
 </section>
-<!--
-const button = doc.querySelector()
-
-button.classList.add('disabled')
-button.disable = false;
--->

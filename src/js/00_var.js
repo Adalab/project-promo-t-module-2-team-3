@@ -26,6 +26,7 @@ const previewPhoto = document.querySelector ('.js__profile-preview');
 const previewEmail = document.querySelector('.rrss__link--email');
 const previewTel = document.querySelector('.rrss__link--tel');
 const createButton = document.querySelector('.js_createbutton');
+const sectionShare = document.querySelector('.js_share_section');
 const createError = document.querySelector('.js-create-error');
 const previewLinkedin = document.querySelector('.rrss__link--linkedin');
 const previewGithub = document.querySelector('.rrss__link--github');
@@ -33,6 +34,7 @@ const form = document.querySelector('.js_form');
 const resetButton = document.getElementById('reset');
 const cardName = document.querySelector('.js_card-name');
 const cardJob = document.querySelector('.js_card-job');
+const cardURL = document.querySelector ('.js_card-link');
 let dataPreview = {
   palette: '',
   name: '',
