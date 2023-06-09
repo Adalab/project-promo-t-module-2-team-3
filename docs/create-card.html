@@ -36,7 +36,9 @@
               <h2 class="card__info--name js_card-name">Nombre Apellido</h2>
               <p class="card__info--job js_card-job">Front-end developer</p>
             </div>
-                  <img src="http://placekitten.com/240/200" alt="Profile Image" class="card__img js__profile-preview">
+                  <div class="card__containerimg js_preview_container">
+                    
+                  </div>
                   <div class="card__rrss">
                       <a href="tel:" target="_blank" class="rrss__link rrss__link--tel"><i class="fa-solid fa-mobile-screen-button"></i></a>
                       <a href="mailto:" target="_blank" class="rrss__link rrss__link--email"><i class="fa-regular fa-envelope"></i></a>
@@ -73,7 +75,7 @@
                     name="options"
                     value="1"
                   />
-                  <div class="color__list js_radio-one">
+                  <div class="color__list">
                     <div class="color__box box__1"></div>
                     <div class="color__box box__2"></div>
                     <div class="color__box box__3"></div>
@@ -88,7 +90,7 @@
                     name="options"
                     value="2"
                   />
-                  <div class="color__list js_radio-two">
+                  <div class="color__list">
                     <div class="color__box box__4"></div>
                     <div class="color__box box__5"></div>
                     <div class="color__box box__6"></div>
@@ -103,7 +105,7 @@
                     name="options"
                     value="3"
                   />
-                  <div class="color__list js_radio-three">
+                  <div class="color__list">
                     <div class="color__box box__7"></div>
                     <div class="color__box box__8"></div>
                     <div class="color__box box__9"></div>
@@ -144,7 +146,7 @@
                 />
               </label>
 
-              <span class="span">Imagen de perfil</span>
+              <span class="span">Imagen de perfil *</span>
 
               <div class="img_button_box">
                 <div class="img_button">
@@ -217,17 +219,18 @@
             </legend>
             <section class="share js_share_container collapsed js_collapse_container">
               <div class="share__create">
-                <button class="share__create--button disabled">
+                <button class="share__create--button">
                   <i class="fa-regular fa-address-card"></i>
-                  <a href="./img/identificacion.png"></a>CREAR TARJETA
+                  <a class="create-link js_createbutton" href="./img/identificacion.png">CREAR TARJETA</a>
                 </button>
+                <p class="error-message js-create-error"></p>
               </div>
 
-              <div class="share__container">
+              <div class="share__container collapsed js_share_section">
                 <p class="share__container--text">La tarjeta ha sido creada:</p>
-                <p class="share__container--link">
-                  https://awesome-profile-card.com?id=A456df0001
-                </p>
+                <a class="share__container--link js_card-link" href="">
+                  
+                </a>
                 <button class="share__container--button js_createbutton">
                   <i class="fa-brands fa-twitter"></i
                   ><a class="share__button--link" href="https://twitter.com/"
@@ -236,13 +239,6 @@
                 </button>
               </div>
             </section>
-            <!--
-            const button = doc.querySelector()
-
-            button.classList.add('disabled')
-            button.disable = false;
-            -->
-
           </fieldset>
         </form>
       </section>
