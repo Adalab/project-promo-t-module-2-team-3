@@ -33,24 +33,21 @@ function rotateArrow(event) {
     rotateShare.classList.add('rotate');
   }
 }
+rotateArrow();
+function handlerClickHeader(ev) {
+  const clickedHeader = ev.currentTarget;
 
-designLegend.addEventListener('click', (event) => {
-  designContainer.classList.remove('collapsed');
-  fillContainer.classList.add('collapsed');
-  shareContainer.classList.add('collapsed');
-  rotateArrow();
-});
-
-fillLegend.addEventListener('click', (event) => {
-  fillContainer.classList.remove('collapsed');
-  shareContainer.classList.add('collapsed');
-  designContainer.classList.add('collapsed');
-  rotateArrow();
-});
-
-shareLegend.addEventListener('click', (event) => {
-  shareContainer.classList.remove('collapsed');
-  fillContainer.classList.add('collapsed');
-  designContainer.classList.add('collapsed');
-  rotateArrow();
-});
+  const parentClicked = clickedHeader.parentNode;
+  for (let i = 0; i < collapseParent.length; i++) {
+    if (collapseParent[i] === parentClicked) {
+      collapseContainer[i].classList.remove('collapsed');
+      rotateArrow();
+    } else {
+      collapseContainer[i].classList.add('collapsed');
+      rotateArrow();
+    }
+  }
+}
+for (const header of collapseHeader) {
+  header.addEventListener('click', handlerClickHeader);
+}
