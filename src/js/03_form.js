@@ -2,7 +2,7 @@ function renderCard(dataPreview) {
   previewName.innerHTML = dataPreview.name || 'Nombre Apellido';
   previewJob.innerHTML = dataPreview.job || 'Front-end developer';
   previewEmail.href = `Mailto:${dataPreview.email}`;
-  previewTel.href = `Tel:${dataPreview.tel}`;
+  previewTel.href = `Tel:${dataPreview.phone}`;
   previewLinkedin.href = `https://www.${dataPreview.linkedin}`;
   previewGithub.href = `https://github.com/${dataPreview.github}`;
 }
@@ -17,7 +17,7 @@ function handleInputs(event) {
   } else if (idInput === 'email') {
     dataPreview.email = valueInput;
   } else if (idInput === 'tel') {
-    dataPreview.tel = valueInput;
+    dataPreview.phone = valueInput;
   } else if (idInput === 'linkedin') {
     dataPreview.linkedin = valueInput;
   } else if (idInput === 'github') {
@@ -33,23 +33,26 @@ function handleInputs(event) {
 }
 function handleCreateButton(event) {
   event.preventDefault();
-  fetch('https://dev.adalab.es/api/card/',{
+  fetch('https://dev.adalab.es/api/card/', {
     method: 'POST',
-    headers: {'content-type':'application/json'},
+    headers: { 'content-type': 'application/json' },
     body: JSON.stringify(dataPreview),
   })
-  .then((response) => response.json())
-  .then((data) => {
-    dataPreview = data;
-    if (data.succes) {
-      sectionShare.classList.remove('collapsed');
-      cardURL.innerHTML = data.cardURL;
-      cardURL.href = data.cardURL;
-    } else {
+    .then((response) => response.json())
+    .then((data) => {
+      dataPreview = data;
       console.log(data);
-      createError.innerHTML = 'Rellena todos los campos obligatorios';
-    }
-  });
+      if (data.success) {
+        sectionShare.classList.remove('collapsed');
+        cardURL.innerHTML = data.cardURL;
+        cardURL.href = data.cardURL;
+        twitterURL.href = `https://twitter.com/intent/tweet?text=${data.cardURL}`
+      } else {
+       
+        createError.innerHTML = 'Rellena todos los campos obligatorios';
+      }
+    });
+    console.log(dataPreview);
 }
 form.addEventListener('input', handleInputs);
-createButton.addEventListener ('click', handleCreateButton);
+createButton.addEventListener('click', handleCreateButton);

@@ -40,9 +40,10 @@ let dataPreview = {
   name: '',
   job: '',
   email: '',
-  tel: '',
+  phone: '',
   linkedin: '',
   github: '',
   photo: '',
 };
 const img = document.querySelector('.js_preview_container');
+const twitterURL = document.querySelector('.js_twitter-link');
