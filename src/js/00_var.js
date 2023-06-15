@@ -35,14 +35,19 @@ const resetButton = document.getElementById('reset');
 const cardName = document.querySelector('.js_card-name');
 const cardJob = document.querySelector('.js_card-job');
 const cardURL = document.querySelector ('.js_card-link');
+const fr = new FileReader();
+const fileField = document.querySelector('.js__profile-upload-btn');
+const profileImage = document.querySelector('.js__profile-image');
+const profilePreview = document.querySelector('.js__profile-preview');
 let dataPreview = {
   palette: '',
   name: '',
   job: '',
   email: '',
-  tel: '',
+  phone: '',
   linkedin: '',
   github: '',
   photo: '',
 };
 const img = document.querySelector('.js_preview_container');
+const twitterURL = document.querySelector('.js_twitter-link');

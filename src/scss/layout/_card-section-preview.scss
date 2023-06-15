@@ -50,29 +50,34 @@
     } 
     .card {
         &__info{
+            width: 240px;
         border-left: 5px solid $dirty-blue;
         margin-bottom: 10px;
         
             &--name {
+                hyphens: auto;
                 color: $dark-green-blue;
                 font-size: 1.8rem;
                 font-family: $title;
                 font-weight: bold;
-                padding-left: 20px;
+                padding-left: 14px;
+                padding-right: 14px;
             }
 
             &--job {
+                hyphens: auto;
                 color: $gunmetal;
                 font-size: 1.6rem;
                 line-height: 1.25;
                 padding-top: 4px;
-                padding-left: 20px;
+                padding-left: 14px;
+               margin-right: 14px;
             }
         }
     }
     .card__containerimg {
         display:block;
-        width: 230px;
+        width: 240px;
         height: 200px;
         background-image: url("http://placekitten.com/240/200");
         background-size: cover;

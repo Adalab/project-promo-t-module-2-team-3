@@ -14,9 +14,7 @@
         border-radius: 12px;
         background-color: $dull-orange;
     }
-    &--button {
-        background-color: $dull-orange;
-    }
+    
 }
 .error-message{
     text-align: center;
@@ -74,4 +72,17 @@ margin-right: 7px;
 }
 .collapsed{
     display: none;
+}
+.button__disabled {
+width: 200px;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: auto;
+color: $white-four;
+font-size: 1.8rem;
+border: none;
+border-radius: 12px;
+background-color: grey;
 }
