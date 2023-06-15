@@ -2,7 +2,7 @@ checkLS();
 
 function renderCard(dataPreview) {
   previewName.innerHTML = dataPreview.name || 'Nombre Apellido';
-  previewJob.innerHTML = dataPreview.job || 'Front-end developer';
+  previewJob.innerHTML = dataPreview.job || 'Promo Trótula';
   previewEmail.href = `Mailto:${dataPreview.email}`;
   previewTel.href = `Tel:${dataPreview.phone}`;
   previewLinkedin.href = `https://www.${dataPreview.linkedin}`;
