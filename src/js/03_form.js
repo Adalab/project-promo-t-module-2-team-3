@@ -1,3 +1,5 @@
+checkLS();
+
 function renderCard(dataPreview) {
   previewName.innerHTML = dataPreview.name || 'Nombre Apellido';
   previewJob.innerHTML = dataPreview.job || 'Front-end developer';
@@ -30,6 +32,7 @@ function handleInputs(event) {
     dataPreview.palette = valueInput;
   }
   renderCard(dataPreview);
+  localStorage.setItem('dataPreview', JSON.stringify(dataPreview));
 }
 function handleCreateButton(event) {
   event.preventDefault();
@@ -40,13 +43,16 @@ function handleCreateButton(event) {
   })
     .then((response) => response.json())
     .then((data) => {
-      dataPreview = data;
-      console.log(data);
+      //dataPreview = data;
+      //console.log(data);
       if (data.success) {
         sectionShare.classList.remove('collapsed');
         cardURL.innerHTML = data.cardURL;
         cardURL.href = data.cardURL;
-        twitterURL.href = `https://twitter.com/intent/tweet?text=${data.cardURL}`
+        twitterURL.href = `https://twitter.com/intent/tweet?text=${data.cardURL}`;
+        createButton.setAttribute('disabled', true);
+        createButton.classList.remove('share__create--button');
+        createButton.classList.add('button__disabled');
       } else {
        
         createError.innerHTML = 'Rellena todos los campos obligatorios';
@@ -54,5 +60,31 @@ function handleCreateButton(event) {
     });
     console.log(dataPreview);
 }
-form.addEventListener('input', handleInputs);
+
+function checkLS() {
+  const dataPreviewLS = JSON.parse(localStorage.getItem('dataPreview'));
+  const inputName = document.querySelector ('.js_input_name');
+  const inputJob = document.querySelector ('.js_input_job');
+  const inputEmail = document.querySelector ('.js_input_email');
+  const inputTel = document.querySelector ('.js_input_tel');
+  const inputLinkedin = document.querySelector ('.js_input_linkedin');
+  const inputGithub = document.querySelector ('.js_input_github');
+  
+  if(dataPreviewLS){
+    renderCard(dataPreviewLS);
+    inputName.value = dataPreviewLS.name;
+    inputJob.value= dataPreviewLS.job;
+    inputEmail.value= dataPreviewLS.email;
+    inputTel.value= dataPreviewLS.phone;
+    inputLinkedin.value= dataPreviewLS.linkedin;
+    inputGithub.value = dataPreviewLS.github;
+    profileImage.style.backgroundImage = dataPreviewLS.photo;
+    form.addEventListener('input', handleInputs);
+
+  }else {
+    form.addEventListener('input', handleInputs);
+  }
+}
+
+
 createButton.addEventListener('click', handleCreateButton);

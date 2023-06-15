@@ -25,7 +25,7 @@ const handleClickReset = (event) => {
     name: '',
     job: '',
     email: '',
-    tel: '',
+    phone: '',
     linkedin: '',
     github: '',
     photo: '',
@@ -38,6 +38,7 @@ const handleClickReset = (event) => {
   previewTel.href = '';
   previewLinkedin.href = '';
   previewGithub.href = '';
+  localStorage.setItem('dataPreview', JSON.stringify(dataPreview));
   rotateArrow();
 };
 resetButton.addEventListener('click', handleClickReset);
