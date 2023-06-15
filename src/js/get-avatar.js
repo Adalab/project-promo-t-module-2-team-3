@@ -11,6 +11,7 @@ function getImage(e){
 function writeImage() {
   profileImage.style.backgroundImage = `url(${fr.result})`;
   img.style.backgroundImage = `url(${fr.result})`;
+  dataPreview.photo = fr.result;
 }
 form.addEventListener('keyup', handleInputs);
 fileField.addEventListener('change', getImage);
